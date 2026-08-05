@@ -1,0 +1,46 @@
+[
+  {
+    "question": "What documents are needed for branch partnership onboarding?",
+    "expected_category": "partnership_benefits"
+  },
+  {
+    "question": "When is the renewal notice sent?",
+    "expected_category": "policy_renewal"
+  },
+  {
+    "question": "What happens if premium is unpaid after the grace period?",
+    "expected_category": "policy_renewal"
+  },
+  {
+    "question": "Can an incomplete application be handled automatically?",
+    "expected_category": "qualification_rules"
+  },
+  {
+    "question": "Is the customer's phone number stored in the KB?",
+    "expected_category": "pii_handling"
+  },
+  {
+    "question": "What plans do you offer?",
+    "expected_category": "product_plans"
+  },
+  {
+    "question": "What is family coverage?",
+    "expected_category": "family_coverage"
+  },
+  {
+    "question": "Can I add spouse later?",
+    "expected_category": "family_coverage"
+  },
+  {
+    "question": "How do I claim insurance?",
+    "expected_category": "claims"
+  },
+  {
+    "question": "Premium is high.",
+    "expected_category": "objection_handling"
+  },
+  {
+    "question": "Who can buy this policy?",
+    "expected_category": "qualification_rules"
+  }
+]

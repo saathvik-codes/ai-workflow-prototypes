@@ -1,0 +1,15 @@
+Insurance Renewal Policy
+
+Policy renewal notice is sent 30 days before expiry.
+If premium remains unpaid after the grace period, the policy may lapse.
+
+Coverage continues only when the premium is received within the allowed period.
+
+Duplicate section:
+Policy renewal notice is sent 30 days before expiry.
+If premium remains unpaid after the grace period, the policy may lapse.
+
+Escalation
+
+If a customer disputes billing or requests a formal review, route to the service team.
+

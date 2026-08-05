@@ -1,0 +1,21 @@
+Lead Qualification Form
+
+Name: John Santos
+Phone: 0917-555-1234
+Age: 41
+Location: Quezon City
+Interested Product: Health Insurance
+Budget: PHP 2,500 monthly
+Needs: Outpatient coverage and hospitalization support
+
+PII Note: Do not retain personal phone numbers or exact customer names in the public knowledge base.
+
+Qualification Rules
+
+- Adult applicants between 18 and 65 may be eligible depending on product.
+- Incomplete applications should be escalated for callback.
+- If the caller asks for unavailable policy exclusions, explain that the agent should verify with the human team.
+
+Incomplete Application Handling
+
+If required details are missing or conflicting, do not guess. Collect the missing fields or escalate for a human callback.

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grounded AI Review Desk</title>
+  <style>
+    :root {
+      --ink: #17201c;
+      --muted: #637169;
+      --bg: #f6f4ee;
+      --panel: #fffefb;
+      --line: #d8ddd5;
+      --green: #0a7469;
+      --blue: #2a638f;
+      --red: #b64932;
+      --gold: #b68a22;
+      --code: #121a17;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(10,116,105,.10), transparent 34%),
+        linear-gradient(225deg, rgba(182,138,34,.11), transparent 40%),
+        var(--bg);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+    .layout {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+    }
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      border-right: 1px solid var(--line);
+      background: rgba(255,254,251,.96);
+      padding: 16px;
+      overflow: auto;
+    }
+    .brand { margin-bottom: 8px; }
+    nav { display: grid; gap: 7px; margin-bottom: 18px; }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 10px;
+      font-size: 14px;
+    }
+    nav a.active { border-color: var(--green); box-shadow: inset 4px 0 0 var(--green); }
+    main { padding: 22px; min-width: 0; }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .topline h2 { margin: 0; font-size: 24px; }
+    .status {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 7px 9px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(360px, 1.08fr);
+      gap: 14px;
+      align-items: start;
+    }
+    .panel, .card, details {
+      border: 1px solid var(--line);
+      background: rgba(255,254,251,.96);
+    }
+    .panel { padding: 16px; }
+    .card { padding: 12px; }
+    details { padding: 11px 12px; margin: 12px 0; }
+    summary { cursor: pointer; font-weight: 700; }
+    h3 { margin: 0 0 10px; font-size: 17px; }
+    p { margin: 0 0 12px; color: var(--muted); line-height: 1.45; }
+    .proof { margin: 10px 0 0 18px; color: var(--muted); line-height: 1.55; }
+    textarea, input, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      padding: 10px;
+      font: 14px/1.45 Consolas, "Courier New", monospace;
+    }
+    textarea { min-height: 132px; resize: vertical; }
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    button {
+      border: 0;
+      background: var(--green);
+      color: #fff;
+      padding: 10px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.alt { background: var(--blue); }
+    button.warn { background: var(--red); }
+    button.gold { background: var(--gold); color: #161410; }
+    pre {
+      margin: 0;
+      min-height: 240px;
+      max-height: 460px;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: var(--code);
+      color: #f7f5ef;
+      padding: 14px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .readable {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .turn, .nudge {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--green);
+      background: #f8fbf8;
+      padding: 10px;
+      font-size: 14px;
+    }
+    .turn.user { border-left-color: var(--blue); }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .metric strong { display: block; font-size: 20px; }
+    .metric small { color: var(--muted); }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; }
+      .workspace, .metrics { grid-template-columns: 1fr; }
+      main { padding: 14px; }
+      .topline { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+      </div>
+      <nav id="nav">
+        <a href="/" data-route="/">Overview</a>
+        <a href="/q2" data-route="/q2">Q2 Knowledge Base</a>
+        <a href="/q1" data-route="/q1">Q1 Voice Agent</a>
+        <a href="/q3" data-route="/q3">Q3 Localized Bots</a>
+        <a href="/q4" data-route="/q4">Q4 Live Nudges</a>
+      </nav>
+    </aside>
+    <main>
+      <div class="topline">
+        <h2 id="pageTitle">Overview</h2>
+        <span class="status">Local demo server: 127.0.0.1:8088</span>
+      </div>
+      <div id="app"></div>
+    </main>
+  </div>
+  <script>
+    const app = document.querySelector('#app');
+    const pageTitle = document.querySelector('#pageTitle');
+    const state = { transcript: [], recorder: null, chunks: [] };
+    const routes = {'/': overview, '/q1': q1, '/q2': q2, '/q3': q3, '/q4': q4};
+
+    function setActive() {
+      document.querySelectorAll('nav a').forEach(a => a.classList.toggle('active', a.dataset.route === location.pathname));
+    }
+    function proof(items) {
+      return `<details><summary>Assessment checks covered</summary><ul class="proof">${items.map(item => `<li>${item}</li>`).join('')}</ul></details>`;
+    }
+    function shell(title, intro, input, proofItems) {
+      pageTitle.textContent = title;
+      app.innerHTML = `<div class="workspace"><section class="panel"><h3>Try It</h3><p>${intro}</p>${input}${proof(proofItems)}</section><section class="panel"><h3>Structured Output</h3><pre id="output">Run a test to see JSON evidence.</pre></section></div><section class="panel" style="margin-top:14px"><h3>Reviewer View</h3><div id="readable" class="readable"></div></section>`;
+      setActive();
+    }
+    function overview() {
+      pageTitle.textContent = 'Evaluation Overview';
+      setActive();
+      app.innerHTML = `<div class="workspace"><section class="panel"><h3>Scenario</h3><p>This prototype turns messy insurance and finance content into working AI workflows: a searchable knowledge base, a grounded voice-agent flow, localized customer conversations, and live call-coaching nudges.</p></section><section class="panel"><h3>Implementation Snapshot</h3><div class="metrics"><div class="card metric"><strong>4</strong><small>working modules</small></div><div class="card metric"><strong>5</strong><small>KB regression tests</small></div><div class="card metric"><strong>CSV</strong><small>CRM handoff</small></div></div><pre id="output">Each module in the sidebar includes a live test input, structured evidence, and a reviewer-friendly result.</pre></section></div>`;
+    }
+    function q1() {
+      shell('Q1 Voice Agent', 'Test the web calling flow with grounded answers, browser speech, recording save, and CRM-style handoff.', `<textarea id="q1text">I need family coverage and a callback later</textarea><div class="controls"><button onclick="q1Send()">Send Turn</button><button class="alt" onclick="q1Speak()">Speak Input</button><button class="gold" onclick="startRecording()">Start Recording</button><button class="warn" onclick="stopRecording()">Stop and Save</button><button class="alt" onclick="postJson('/api/q1/scenario',{})">Run Scenario</button></div>`, ['Uses Q2 retrieval before answering', 'Escalates unsupported or risky requests', 'Writes mock CRM export']);
+      renderTranscript();
+    }
+    function q2() {
+      shell('Q2 Knowledge Base', 'Search cleaned business records with citations, categories, retrieval scores, and PII-safe output.', `<input id="q2text" value="When is the renewal notice sent?"/><div class="controls"><button onclick="postJson('/api/q2/search',{question:q2text.value})">Search KB</button><button class="alt" onclick="postJson('/api/q2/build',{})">Rebuild KB</button></div>`, ['Cleans messy source data', 'Masks PII and tracks provenance', 'Returns cited retrieval results']);
+    }
+    function q3() {
+      shell('Q3 Localized Bots', 'Test Taglish, Bahasa Indonesia, regional wording, and safe same-language fallback.', `<select id="market"><option value="ph">Philippines</option><option value="id">Indonesia</option></select><textarea id="q3text">Pwede ba Taglish? I need family beneficiary details.</textarea><div class="controls"><button onclick="runQ3()">Send Localized Turn</button><button class="alt" onclick="market.value='ph'; q3text.value='Mahal ba ang premium kung may rider at bank referral?'; runQ3()">PH Objection</button><button class="alt" onclick="market.value='id'; q3text.value='Kulo telat bayar cicilan, pripun denda ne?'; runQ3()">ID Regional Sample</button><button class="warn" onclick="market.value='id'; q3text.value='Apa promo crypto yang dijamin untung?'; runQ3()">Fallback Test</button></div>`, ['Detects language mix and terms', 'Shows localization metadata', 'Preserves safe fallback language']);
+    }
+    async function runQ3() {
+      const payload = await postJson('/api/q3/respond', {market:market.value, text:q3text.value});
+      const box = document.querySelector('#readable');
+      box.innerHTML = `<div class="turn user"><strong>Customer</strong><br>${escapeHtml(payload.input)}</div><div class="turn"><strong>Bot</strong><br>${escapeHtml(payload.response)}</div><div class="nudge"><strong>English explanation</strong><br>${escapeHtml(payload.english_explanation || 'No explanation available.')}</div><div class="nudge"><strong>Localization metadata</strong><br>Intent: ${escapeHtml(payload.intent)}<br>Register: ${escapeHtml(payload.register)}<br>Language mix: ${escapeHtml(payload.language_mix)}<br>Terms: ${escapeHtml((payload.terms_detected || []).join(', ') || 'none')}<br>Next action: ${escapeHtml(payload.next_action)}</div>`;
+    }
+    function q4() {
+      shell('Q4 Live Nudges', 'Process each line as a live call chunk and inspect latency, nudges, suppression, and false-positive controls.', `<textarea id="q4text">Customer: Hello, I have one vehicle on my policy.
+Customer: Actually I bought a second car last week.
+Customer: Your agent skipped the disclosure and I am getting frustrated.
+Customer: I can't pay right now, call me later.</textarea><div class="controls"><button onclick="runQ4()">Run Stream</button><button class="alt" onclick="q4text.value='Customer: background noise ... okay maybe...\\nCustomer: not sure what you mean ...\\nAgent: just a normal update, nothing urgent\\nCustomer: okay thanks'; runQ4()">Noisy Call Test</button><button class="warn" onclick="q4text.value='Agent: This is guaranteed approval with no risk.\\nCustomer: I bought a second vehicle.\\nCustomer: This is taking too long.'; runQ4()">Risky Statement Test</button></div>`, ['Before-call-end chunk processing', 'Confidence, grouping, suppression', 'P50/P95 and component latency']);
+    }
+    async function runQ4() {
+      const payload = await postJson('/api/q4/stream', {chunks:q4text.value.split('\\n').filter(Boolean)});
+      const box = document.querySelector('#readable');
+      box.innerHTML = `<div class="metrics"><div class="card metric"><strong>${payload.p50_ms} ms</strong><small>P50 latency</small></div><div class="card metric"><strong>${payload.p95_ms} ms</strong><small>P95 latency</small></div><div class="card metric"><strong>${payload.nudges.length}</strong><small>nudges emitted</small></div></div>`;
+      box.innerHTML += '<h3>Live Timeline</h3>' + payload.timeline.map(item => `<div class="turn ${item.speaker === 'customer' ? 'user' : ''}"><strong>Chunk ${item.chunk_index} - ${item.speaker}</strong><br>${escapeHtml(item.text)}<br><small>${item.signals.map(s => s.kind + ' (' + Math.round(s.confidence * 100) + '%)').join(', ') || 'no signal'}</small></div>`).join('');
+      box.innerHTML += '<h3>Nudges</h3>' + (payload.nudges.length ? payload.nudges.map(n => `<div class="nudge"><strong>${n.nudge.priority}</strong> - ${escapeHtml(n.signal.kind)}<br>${escapeHtml(n.nudge.message)}<br><small>chunk ${n.chunk}, confidence ${Math.round(n.signal.confidence * 100)}%, expires in ${n.nudge.expires_in_sec}s</small></div>`).join('') : '<div class="nudge">No nudges emitted. Suppression worked for this call.</div>');
+      box.innerHTML += `<h3>Controls</h3><div class="nudge">${escapeHtml(JSON.stringify(payload.controls, null, 2))}</div><h3>False Positive Check</h3><div class="nudge">${escapeHtml(JSON.stringify(payload.false_positive_analysis, null, 2))}</div>`;
+    }
+    async function q1Send(textOverride) {
+      const text = textOverride || document.querySelector('#q1text').value;
+      state.transcript.push({speaker:'customer', text});
+      const data = await postJson('/api/q1/call', {text, transcript: state.transcript.slice(0, -1)});
+      state.transcript.push({speaker:'agent', text:data.answer, intent:data.intent, source_ref:data.source_ref});
+      speak(data.answer);
+      renderTranscript();
+    }
+    function q1Speak() {
+      const Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!Rec) {
+        setOutput({error:'SpeechRecognition is not available in this browser. Use text input or Chrome.'});
+        return;
+      }
+      const rec = new Rec();
+      rec.lang = 'en-US';
+      rec.onresult = e => {
+        const text = e.results[0][0].transcript;
+        document.querySelector('#q1text').value = text;
+        q1Send(text);
+      };
+      rec.start();
+    }
+    async function startRecording() {
+      const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+      state.chunks = [];
+      state.recorder = new MediaRecorder(stream);
+      state.recorder.ondataavailable = e => state.chunks.push(e.data);
+      state.recorder.start();
+      setOutput({recording:'started'});
+    }
+    async function stopRecording() {
+      if (!state.recorder) {
+        setOutput({recording:'not_started'});
+        return;
+      }
+      state.recorder.onstop = async () => {
+        const blob = new Blob(state.chunks, {type:'audio/webm'});
+        const audio_base64 = await blobToDataUrl(blob);
+        await postJson('/api/q1/save-recording', {name:'web-call-' + Date.now(), audio_base64, transcript:state.transcript});
+      };
+      state.recorder.stop();
+    }
+    function speak(text) {
+      if (!('speechSynthesis' in window)) return;
+      speechSynthesis.cancel();
+      speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+    }
+    function blobToDataUrl(blob) {
+      return new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(blob);
+      });
+    }
+    async function postJson(url, data) {
+      setOutput({status:'running'});
+      const res = await fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+      const payload = await res.json();
+      setOutput(payload);
+      return payload;
+    }
+    function setOutput(data) {
+      const out = document.querySelector('#output');
+      if (out) out.textContent = JSON.stringify(data, null, 2);
+    }
+    function renderTranscript() {
+      const box = document.querySelector('#readable');
+      if (!box) return;
+      box.innerHTML = state.transcript.map(t => `<div class="turn ${t.speaker === 'customer' ? 'user' : ''}"><strong>${t.speaker}</strong><br>${escapeHtml(t.text)}${t.intent ? `<br><small>${t.intent}</small>` : ''}</div>`).join('');
+    }
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+    (routes[location.pathname] || overview)();
+    setActive();
+  </script>
+</body>
+</html>

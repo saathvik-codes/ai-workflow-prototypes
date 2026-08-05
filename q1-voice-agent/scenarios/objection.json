@@ -1,0 +1,9 @@
+{
+  "name": "price_objection",
+  "turns": [
+    "This sounds expensive. Why should I continue?",
+    "Does the plan cover pre-existing conditions?",
+    "If I am not sure yet, can someone call me later?"
+  ]
+}
+

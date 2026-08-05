@@ -1,0 +1,10 @@
+{
+  "name": "cooperative_customer",
+  "turns": [
+    "Hi, I'm interested in health insurance for my family.",
+    "We want outpatient and hospitalization coverage.",
+    "Our budget is around 2500 monthly.",
+    "What documents do you need from me?"
+  ]
+}
+
