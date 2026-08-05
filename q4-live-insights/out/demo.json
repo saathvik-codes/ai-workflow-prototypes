@@ -1,0 +1,46 @@
+{
+  "nudges": [
+    {
+      "chunk": 1,
+      "signal": {
+        "kind": "missed_cross_sell",
+        "detail": "Customer mentioned another vehicle",
+        "confidence": 0.88
+      },
+      "nudge": {
+        "message": "Customer mentioned a second vehicle. Suggest the multi-vehicle offer.",
+        "priority": "medium",
+        "expires_in_sec": 180
+      }
+    },
+    {
+      "chunk": 2,
+      "signal": {
+        "kind": "frustration",
+        "detail": "Customer appears frustrated",
+        "confidence": 0.91
+      },
+      "nudge": {
+        "message": "Acknowledge the concern before continuing.",
+        "priority": "high",
+        "expires_in_sec": 120
+      }
+    },
+    {
+      "chunk": 3,
+      "signal": {
+        "kind": "callback_need",
+        "detail": "Customer requested callback or payment help",
+        "confidence": 0.84
+      },
+      "nudge": {
+        "message": "Offer an approved callback path or payment-support option.",
+        "priority": "medium",
+        "expires_in_sec": 180
+      }
+    }
+  ],
+  "p50_ms": 10.46,
+  "p95_ms": 10.55,
+  "chunks": 4
+}

@@ -1,0 +1,389 @@
+[
+  {
+    "record_id": "kb_health_product_faq_000_49c1897992",
+    "title": "Health Insurance Product Guide",
+    "content": "Health Insurance Product Guide\nAvailable Plans",
+    "category": "product_plans",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 0,
+    "tags": [
+      "available",
+      "guide",
+      "health",
+      "insurance",
+      "plans",
+      "product"
+    ]
+  },
+  {
+    "record_id": "kb_health_product_faq_001_b5969233bd",
+    "title": "Customers can choose an individual health plan, family floater plan, or senior-s",
+    "content": "Customers can choose an individual health plan, family floater plan, or senior-support review path. Plan suitability depends on age, city, coverage amount, budget, and medical disclosures.",
+    "category": "family_coverage",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 1,
+    "tags": [
+      "choose",
+      "customers",
+      "family",
+      "health",
+      "individual",
+      "plan"
+    ]
+  },
+  {
+    "record_id": "kb_health_product_faq_002_bc26e63b60",
+    "title": "Family Coverage",
+    "content": "Family Coverage\nFamily floater coverage can include spouse and children under one shared coverage limit. The agent should collect each family member's age before suggesting a family floater.",
+    "category": "family_coverage",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 2,
+    "tags": [
+      "coverage",
+      "family",
+      "floater",
+      "include"
+    ]
+  },
+  {
+    "record_id": "kb_health_product_faq_003_db07cadd3b",
+    "title": "Coverage Amount",
+    "content": "Coverage Amount\nCommon requested coverage ranges include 5 lakhs, 10 lakhs, and 25 lakhs. Exact premium quotes require advisor review.",
+    "category": "general",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 3,
+    "tags": [
+      "amount",
+      "common",
+      "coverage",
+      "ranges",
+      "requested"
+    ]
+  },
+  {
+    "record_id": "kb_health_product_faq_004_1fe40e7902",
+    "title": "Adding Spouse Later",
+    "content": "Adding Spouse Later\nA spouse can usually be reviewed for addition at renewal or through an endorsement request, subject to policy terms and underwriting checks.",
+    "category": "family_coverage",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 4,
+    "tags": [
+      "adding",
+      "later",
+      "reviewed",
+      "spouse",
+      "usually"
+    ]
+  },
+  {
+    "record_id": "kb_health_product_faq_005_11288ece46",
+    "title": "Claims Process",
+    "content": "Claims Process\nFor claims, the customer should contact the service team, share policy details, hospital or bill documents, and follow the insurer's cashless or reimbursement process.",
+    "category": "claims",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 5,
+    "tags": [
+      "claims",
+      "contact",
+      "customer",
+      "process",
+      "should"
+    ]
+  },
+  {
+    "record_id": "kb_health_product_faq_006_5e8886e5cc",
+    "title": "Premium Objection",
+    "content": "Premium Objection\nIf the customer says the premium is high, explain benefits, suggest checking a lower coverage amount or simpler plan, and offer advisor review. Do not promise discounts.",
+    "category": "objection_handling",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 6,
+    "tags": [
+      "customer",
+      "high",
+      "objection",
+      "premium",
+      "says"
+    ]
+  },
+  {
+    "record_id": "kb_health_product_faq_007_6e25274d89",
+    "title": "Existing Insurance",
+    "content": "Existing Insurance\nIf the customer already has insurance, ask the renewal date and offer a comparison review before recommending any switch.",
+    "category": "policy_renewal",
+    "source": "health_product_faq.txt",
+    "source_ref": "raw/health_product_faq.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 7,
+    "tags": [
+      "already",
+      "customer",
+      "existing",
+      "has",
+      "insurance"
+    ]
+  },
+  {
+    "record_id": "kb_lead_qualification_000_6fc6e6cd4b",
+    "title": "Lead Qualification Form",
+    "content": "Lead Qualification Form\nName: [REDACTED_NAME]\nPhone: [REDACTED_PHONE]\nAge: 41\nLocation: Quezon City\nInterested Product: Health Insurance\nBudget: PHP 2,500 monthly\nNeeds: Outpatient coverage and hospitalization support",
+    "category": "pii_handling",
+    "source": "lead_qualification.txt",
+    "source_ref": "raw/lead_qualification.txt",
+    "version": "1.0",
+    "pii_present": true,
+    "chunk_index": 0,
+    "tags": [
+      "form",
+      "lead",
+      "name",
+      "qualification",
+      "redacted"
+    ]
+  },
+  {
+    "record_id": "kb_lead_qualification_001_5749ba1ba6",
+    "title": "PII Note: Do not retain personal phone numbers or exact customer names in the pu",
+    "content": "PII Note: Do not retain personal phone numbers or exact customer names in the public knowledge base.",
+    "category": "pii_handling",
+    "source": "lead_qualification.txt",
+    "source_ref": "raw/lead_qualification.txt",
+    "version": "1.0",
+    "pii_present": true,
+    "chunk_index": 1,
+    "tags": [
+      "do",
+      "not",
+      "note",
+      "personal",
+      "pii",
+      "retain"
+    ]
+  },
+  {
+    "record_id": "kb_lead_qualification_002_dcf158a9bb",
+    "title": "Qualification Rules",
+    "content": "Qualification Rules\n- Adult applicants between 18 and 65 may be eligible depending on product.\n- Incomplete applications should be escalated for callback.\n- If the caller asks for unavailable policy exclusions, explain that the agent should verify with the human team.",
+    "category": "qualification_rules",
+    "source": "lead_qualification.txt",
+    "source_ref": "raw/lead_qualification.txt",
+    "version": "1.0",
+    "pii_present": true,
+    "chunk_index": 2,
+    "tags": [
+      "18",
+      "adult",
+      "applicants",
+      "between",
+      "qualification",
+      "rules"
+    ]
+  },
+  {
+    "record_id": "kb_lead_qualification_003_4df34138a4",
+    "title": "Incomplete Application Handling",
+    "content": "Incomplete Application Handling\nIf required details are missing or conflicting, do not guess. Collect the missing fields or escalate for a human callback.",
+    "category": "qualification_rules",
+    "source": "lead_qualification.txt",
+    "source_ref": "raw/lead_qualification.txt",
+    "version": "1.0",
+    "pii_present": true,
+    "chunk_index": 3,
+    "tags": [
+      "application",
+      "details",
+      "handling",
+      "incomplete",
+      "missing",
+      "required"
+    ]
+  },
+  {
+    "record_id": "kb_policy_renewal_000_19c8db8e0a",
+    "title": "Insurance Renewal Policy",
+    "content": "Insurance Renewal Policy\nPolicy renewal notice is sent 30 days before expiry.\nIf premium remains unpaid after the grace period, the policy may lapse.",
+    "category": "policy_renewal",
+    "source": "policy_renewal.txt",
+    "source_ref": "raw/policy_renewal.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 0,
+    "tags": [
+      "insurance",
+      "notice",
+      "policy",
+      "renewal"
+    ]
+  },
+  {
+    "record_id": "kb_policy_renewal_001_2ef1776f56",
+    "title": "Coverage continues only when the premium is received within the allowed period.",
+    "content": "Coverage continues only when the premium is received within the allowed period.",
+    "category": "policy_renewal",
+    "source": "policy_renewal.txt",
+    "source_ref": "raw/policy_renewal.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 1,
+    "tags": [
+      "allowed",
+      "continues",
+      "coverage",
+      "only",
+      "premium",
+      "received"
+    ]
+  },
+  {
+    "record_id": "kb_policy_renewal_002_0c501d7dca",
+    "title": "Escalation",
+    "content": "Escalation\nIf a customer disputes billing or requests a formal review, route to the service team.",
+    "category": "policy_renewal",
+    "source": "policy_renewal.txt",
+    "source_ref": "raw/policy_renewal.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 2,
+    "tags": [
+      "billing",
+      "customer",
+      "disputes",
+      "escalation",
+      "formal",
+      "requests"
+    ]
+  },
+  {
+    "record_id": "kb_qualification_table_000_6d2711318c",
+    "title": "field,standard_name,category,notes",
+    "content": "field,standard_name,category,notes\nApplicant Age,applicant_age,qualification_rules,Adult applicants between 18 and 65 may be eligible depending on product.\nMonthly Budget,monthly_budget,qualification_rules,Use ranges rather than exact sensitive income values.\nCallback Requested,callback_requested,lead_action,Schedule callback when customer asks for a later follow-up.",
+    "category": "qualification_rules",
+    "source": "qualification_table.csv",
+    "source_ref": "raw/qualification_table.csv",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 0,
+    "tags": [
+      "applicant",
+      "category",
+      "field",
+      "name",
+      "notes",
+      "standard"
+    ]
+  },
+  {
+    "record_id": "kb_website_partnerships_000_578a965a09",
+    "title": "Branch Partnership Program",
+    "content": "# Branch Partnership Program\nBranch Partnership Benefits",
+    "category": "partnership_benefits",
+    "source": "website_partnerships.txt",
+    "source_ref": "raw/website_partnerships.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 0,
+    "tags": [
+      "benefits",
+      "branch",
+      "partnership",
+      "program"
+    ]
+  },
+  {
+    "record_id": "kb_website_partnerships_001_76c2442e7a",
+    "title": "Operational, marketing, and technology support is provided to branch partners.",
+    "content": "Operational, marketing, and technology support is provided to branch partners.\nPartners receive onboarding guidance, co-branded campaign materials, and access to product updates.",
+    "category": "partnership_benefits",
+    "source": "website_partnerships.txt",
+    "source_ref": "raw/website_partnerships.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 1,
+    "tags": [
+      "branch",
+      "marketing",
+      "operational",
+      "provided",
+      "support",
+      "technology"
+    ]
+  },
+  {
+    "record_id": "kb_website_partnerships_002_b78fd9f6fa",
+    "title": "Eligibility",
+    "content": "Eligibility\nEligible partners must be licensed financial institutions or approved distribution partners.",
+    "category": "partnership_benefits",
+    "source": "website_partnerships.txt",
+    "source_ref": "raw/website_partnerships.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 2,
+    "tags": [
+      "eligibility",
+      "eligible",
+      "financial",
+      "licensed",
+      "must",
+      "partners"
+    ]
+  },
+  {
+    "record_id": "kb_website_partnerships_003_bd1c71a9ff",
+    "title": "Frequently Asked Questions",
+    "content": "Frequently Asked Questions\nQ: What support do branch partners receive?\nA: Partners receive operational support, marketing support, and implementation guidance.",
+    "category": "partnership_benefits",
+    "source": "website_partnerships.txt",
+    "source_ref": "raw/website_partnerships.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 3,
+    "tags": [
+      "asked",
+      "do",
+      "frequently",
+      "q",
+      "questions",
+      "support"
+    ]
+  },
+  {
+    "record_id": "kb_website_partnerships_004_e724901d8a",
+    "title": "Q: Who can apply?",
+    "content": "Q: Who can apply?\nA: Licensed institutions and approved distribution partners may apply.",
+    "category": "partnership_benefits",
+    "source": "website_partnerships.txt",
+    "source_ref": "raw/website_partnerships.txt",
+    "version": "1.0",
+    "pii_present": false,
+    "chunk_index": 4,
+    "tags": [
+      "apply",
+      "approved",
+      "distribution",
+      "institutions",
+      "licensed",
+      "q"
+    ]
+  }
+]

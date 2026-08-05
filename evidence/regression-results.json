@@ -1,0 +1,516 @@
+{
+  "q1": [
+    {
+      "case": "TC-01 normal customer",
+      "input": "I need health insurance for myself.",
+      "intent": "lead_opening",
+      "escalated": false,
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-02 family coverage",
+      "input": "I need insurance for my wife and two children.",
+      "intent": "family_coverage",
+      "escalated": false,
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-03 callback",
+      "input": "I'm busy now. Please call me tomorrow afternoon.",
+      "intent": "callback_request",
+      "escalated": false,
+      "source_ref": null
+    },
+    {
+      "case": "TC-04 eligible",
+      "input": "Age:35 Non smoker Coverage:10 Lakhs",
+      "intent": "eligible_lead",
+      "escalated": false,
+      "source_ref": "raw/lead_qualification.txt"
+    },
+    {
+      "case": "TC-05 not eligible",
+      "input": "Age:87",
+      "intent": "not_eligible_age",
+      "escalated": true,
+      "source_ref": "raw/lead_qualification.txt"
+    },
+    {
+      "case": "TC-06 missing income",
+      "input": "I don't know my income.",
+      "intent": "incomplete_or_conflicting_details",
+      "escalated": true,
+      "source_ref": "raw/lead_qualification.txt"
+    },
+    {
+      "case": "TC-07 expensive",
+      "input": "This is expensive.",
+      "intent": "objection",
+      "escalated": false,
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-08 need time",
+      "input": "I'll think about it.",
+      "intent": "needs_time",
+      "escalated": false,
+      "source_ref": null
+    },
+    {
+      "case": "TC-09 already insured",
+      "input": "I already have insurance.",
+      "intent": "existing_insurance",
+      "escalated": false,
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-10 weather",
+      "input": "What's the weather today?",
+      "intent": "out_of_scope",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-11 cricket",
+      "input": "What is the cricket score?",
+      "intent": "out_of_scope",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-12 programming",
+      "input": "Explain binary search.",
+      "intent": "out_of_scope",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-13 renewal",
+      "input": "When is renewal notice sent?",
+      "intent": "grounded_kb_answer",
+      "escalated": false,
+      "source_ref": "raw/policy_renewal.txt"
+    },
+    {
+      "case": "TC-14 grace",
+      "input": "What is the grace period?",
+      "intent": "grounded_kb_answer",
+      "escalated": false,
+      "source_ref": "raw/policy_renewal.txt"
+    },
+    {
+      "case": "TC-15 unknown product",
+      "input": "What is Diamond Ultra Platinum Gold Plan?",
+      "intent": "unknown_product",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-16 human",
+      "input": "I want to speak to a human.",
+      "intent": "human_escalation",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-17 angry",
+      "input": "This service is useless.",
+      "intent": "high_risk_escalation",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-18 legal",
+      "input": "I'll file a legal complaint.",
+      "intent": "high_risk_escalation",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-19 gibberish",
+      "input": "asdfghjk",
+      "intent": "clarification",
+      "escalated": false,
+      "source_ref": null
+    },
+    {
+      "case": "TC-20 silence",
+      "input": "",
+      "intent": "reprompt",
+      "escalated": false,
+      "source_ref": null
+    },
+    {
+      "case": "TC-21 mixed language",
+      "input": "Insurance kavali for family.",
+      "intent": "family_coverage",
+      "escalated": false,
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-24 close",
+      "input": "Thank you.",
+      "intent": "conversation_close",
+      "escalated": false,
+      "source_ref": null
+    },
+    {
+      "case": "ALT-01 business loan",
+      "input": "I need a business loan for working capital.",
+      "intent": "unsupported_business_loan",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "ALT-02 candidate screening",
+      "input": "Can you do candidate screening from a resume?",
+      "intent": "unsupported_candidate_screening",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "ALT-03 loan reminder",
+      "input": "This is for a loan pre-due reminder.",
+      "intent": "unsupported_loan_pre_due_reminder",
+      "escalated": true,
+      "source_ref": null
+    },
+    {
+      "case": "TC-22 CRM lead JSON",
+      "summary": {
+        "name": null,
+        "intent": "health_insurance_lead_qualification",
+        "coverage": null,
+        "coverage_needs": [],
+        "budget_range": "monthly budget mentioned",
+        "preliminary_eligibility": "preliminarily_qualified",
+        "callback_requested": false,
+        "crm_stage": "qualified_lead",
+        "next_action": "send to licensed advisor",
+        "notes": [
+          "retrieval:kb_health_product_faq_002_bc26e63b60",
+          "retrieval:kb_lead_qualification_002_dcf158a9bb"
+        ]
+      }
+    },
+    {
+      "case": "TC-23 callback JSON",
+      "action": "callback_request",
+      "answer": "Absolutely. I'll save the callback request and note the requested time so a human can follow up."
+    },
+    {
+      "case": "TC-25 multi-turn qualification details",
+      "intent": "qualification_details_collected",
+      "source_ref": "raw/lead_qualification.txt"
+    },
+    {
+      "case": "ST-01 Q1 100 rapid requests",
+      "status": "passed"
+    },
+    {
+      "case": "ST-02 Q1 long input",
+      "intent": "lead_opening"
+    },
+    {
+      "case": "ST-03 Q1 emoji input",
+      "intent": "family_coverage"
+    },
+    {
+      "case": "ST-04 Q1 KB unavailable",
+      "intent": "knowledge_base_unavailable"
+    }
+  ],
+  "q2": [
+    {
+      "case": "TC-01 plans",
+      "query": "What plans do you offer?",
+      "top_category": "product_plans",
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-02 family",
+      "query": "What is family coverage?",
+      "top_category": "family_coverage",
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-03 renewal",
+      "query": "When is renewal notice sent?",
+      "top_category": "policy_renewal",
+      "source_ref": "raw/policy_renewal.txt"
+    },
+    {
+      "case": "TC-04 grace",
+      "query": "What is grace period?",
+      "top_category": "policy_renewal",
+      "source_ref": "raw/policy_renewal.txt"
+    },
+    {
+      "case": "TC-05 spouse",
+      "query": "Can I add spouse later?",
+      "top_category": "family_coverage",
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-06 claim",
+      "query": "How do I claim insurance?",
+      "top_category": "claims",
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-07 objection",
+      "query": "Premium is high.",
+      "top_category": "objection_handling",
+      "source_ref": "raw/health_product_faq.txt"
+    },
+    {
+      "case": "TC-08 eligibility",
+      "query": "Who can buy this policy?",
+      "top_category": "qualification_rules",
+      "source_ref": "raw/lead_qualification.txt"
+    },
+    {
+      "case": "TC-10 synonym",
+      "query": "Renew",
+      "top_category": "policy_renewal",
+      "source_ref": "raw/policy_renewal.txt"
+    },
+    {
+      "case": "TC-11 typo",
+      "query": "Renwel",
+      "top_category": "policy_renewal",
+      "source_ref": "raw/policy_renewal.txt"
+    },
+    {
+      "case": "TC-12 empty query",
+      "hits": 0
+    },
+    {
+      "case": "TC-13 very long query",
+      "top_category": "policy_renewal"
+    },
+    {
+      "case": "TC-14 PII query",
+      "top_category": "pii_handling"
+    },
+    {
+      "case": "TC-15 unknown product",
+      "hits": 0
+    },
+    {
+      "case": "ST-05 Q2 100 rapid requests",
+      "status": "passed"
+    }
+  ],
+  "q3": [
+    {
+      "case": "PH-01 English",
+      "input": "Hello",
+      "intent": "greeting",
+      "register": "taglish_polite"
+    },
+    {
+      "case": "PH-02 Tagalog",
+      "input": "Kailangan ko ng insurance",
+      "intent": "insurance_need",
+      "register": "filipino_taglish"
+    },
+    {
+      "case": "PH-03 Taglish",
+      "input": "Premium magkano?",
+      "intent": "policy_faq",
+      "register": "taglish"
+    },
+    {
+      "case": "PH-04 Beneficiary",
+      "input": "Beneficiary details please",
+      "intent": "policy_faq",
+      "register": "taglish"
+    },
+    {
+      "case": "PH-05 Rider",
+      "input": "May rider ba?",
+      "intent": "policy_faq",
+      "register": "taglish"
+    },
+    {
+      "case": "PH-06 Human",
+      "input": "Human agent please",
+      "intent": "human_escalation",
+      "register": "taglish_formal"
+    },
+    {
+      "case": "PH-07 Reminder",
+      "input": "Premium reminder please",
+      "intent": "lapse_or_reminder",
+      "register": "taglish_polite"
+    },
+    {
+      "case": "PH-08 Renewal",
+      "input": "Renewal reminder",
+      "intent": "lapse_or_reminder",
+      "register": "taglish_polite"
+    },
+    {
+      "case": "PH-09 Bank referral",
+      "input": "Bank referral premium",
+      "intent": "policy_faq",
+      "register": "taglish"
+    },
+    {
+      "case": "ID-11 Formal",
+      "input": "Saya mau cek cicilan dan jatuh tempo.",
+      "intent": "installment_or_terms",
+      "register": "colloquial_bahasa"
+    },
+    {
+      "case": "ID-12 Colloquial",
+      "input": "Bayar cicilan besok ya",
+      "intent": "installment_or_terms",
+      "register": "colloquial_bahasa"
+    },
+    {
+      "case": "ID-13 Regional",
+      "input": "Kulo telat bayar cicilan",
+      "intent": "regional_accent_payment_issue",
+      "register": "javanese_influenced_bahasa"
+    },
+    {
+      "case": "ID-14 DP",
+      "input": "DP saya kurang",
+      "intent": "installment_or_terms",
+      "register": "colloquial_bahasa"
+    },
+    {
+      "case": "ID-15 Tenor",
+      "input": "Tenor masih bisa diubah?",
+      "intent": "installment_or_terms",
+      "register": "colloquial_bahasa"
+    },
+    {
+      "case": "ID-16 Denda",
+      "input": "Ada denda?",
+      "intent": "late_payment_objection",
+      "register": "colloquial_bahasa"
+    },
+    {
+      "case": "ID-17 Loan follow-up",
+      "input": "Loan saya overdue",
+      "intent": "mixed_english_overdue",
+      "register": "colloquial_bahasa_with_english_loanword"
+    },
+    {
+      "case": "ID-18 Collections",
+      "input": "Saya dapat tagihan collections",
+      "intent": "collections_support",
+      "register": "bahasa_formal"
+    },
+    {
+      "case": "ID-19 Mixed English",
+      "input": "Loan saya overdue",
+      "intent": "mixed_english_overdue",
+      "register": "colloquial_bahasa_with_english_loanword"
+    },
+    {
+      "case": "ID-20 Escalation",
+      "input": "Saya butuh customer service",
+      "intent": "human_escalation",
+      "register": "bahasa_formal"
+    },
+    {
+      "case": "ST-06 Q3 Hindi/English mix",
+      "intent": "family_coverage"
+    },
+    {
+      "case": "ST-07 Q3 emoji",
+      "intent": "greeting"
+    },
+    {
+      "case": "ST-08 Q3 100 rapid requests",
+      "status": "passed"
+    }
+  ],
+  "q4": [
+    {
+      "case": "TC-01 cross sell",
+      "signals": [
+        "missed_cross_sell"
+      ],
+      "p95_ms": 6.06
+    },
+    {
+      "case": "TC-02 compliance",
+      "signals": [
+        "compliance_gap"
+      ],
+      "p95_ms": 5.99
+    },
+    {
+      "case": "TC-03 frustration",
+      "signals": [
+        "frustration"
+      ],
+      "p95_ms": 5.99
+    },
+    {
+      "case": "TC-04 callback",
+      "signals": [
+        "callback_need"
+      ],
+      "p95_ms": 6.09
+    },
+    {
+      "case": "TC-05 buying",
+      "signals": [
+        "buying_signal"
+      ],
+      "p95_ms": 5.94
+    },
+    {
+      "case": "TC-06 payment difficulty",
+      "signals": [
+        "callback_need"
+      ],
+      "p95_ms": 6.41
+    },
+    {
+      "case": "TC-09 duplicate",
+      "signals": [
+        "frustration"
+      ],
+      "p95_ms": 4.48
+    },
+    {
+      "case": "TC-11 topic change",
+      "signals": [
+        "callback_need"
+      ],
+      "p95_ms": 4.32
+    },
+    {
+      "case": "TC-12 multiple",
+      "signals": [
+        "frustration",
+        "callback_need",
+        "missed_cross_sell"
+      ],
+      "p95_ms": 9.45
+    },
+    {
+      "case": "TC-07/08 noisy and ambiguous",
+      "nudges": 0
+    },
+    {
+      "case": "TC-12 priority order",
+      "signals": [
+        "frustration",
+        "callback_need",
+        "missed_cross_sell"
+      ]
+    },
+    {
+      "case": "ST-09 Q4 100 rapid requests",
+      "status": "passed"
+    }
+  ]
+}

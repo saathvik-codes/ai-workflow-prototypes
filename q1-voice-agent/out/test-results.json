@@ -1,0 +1,48 @@
+[
+  {
+    "scenario": "conflicting_details",
+    "turns": 3,
+    "escalated": true,
+    "last_intent": "fallback",
+    "crm_stage": "escalated",
+    "next_action": "human specialist review",
+    "retrieval_hits": [
+      "kb_lead_qualification_003_4df34138a4"
+    ]
+  },
+  {
+    "scenario": "cooperative_customer",
+    "turns": 4,
+    "escalated": false,
+    "last_intent": "documents",
+    "crm_stage": "qualified_lead",
+    "next_action": "send to licensed advisor",
+    "retrieval_hits": [
+      "kb_health_product_faq_002_bc26e63b60",
+      "kb_lead_qualification_002_dcf158a9bb",
+      "kb_lead_qualification_002_dcf158a9bb",
+      "kb_lead_qualification_003_4df34138a4"
+    ]
+  },
+  {
+    "scenario": "price_objection",
+    "turns": 3,
+    "escalated": false,
+    "last_intent": "callback_request",
+    "crm_stage": "callback_requested",
+    "next_action": "schedule callback",
+    "retrieval_hits": [
+      "kb_health_product_faq_006_5e8886e5cc",
+      "kb_policy_renewal_000_19c8db8e0a"
+    ]
+  },
+  {
+    "scenario": "out_of_scope",
+    "turns": 3,
+    "escalated": true,
+    "last_intent": "human_escalation",
+    "crm_stage": "escalated",
+    "next_action": "human specialist review",
+    "retrieval_hits": []
+  }
+]

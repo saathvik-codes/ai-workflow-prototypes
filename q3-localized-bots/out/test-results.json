@@ -1,0 +1,167 @@
+{
+  "philippines": [
+    {
+      "market": "philippines",
+      "sector": "life_insurance_bancassurance",
+      "input": "Hi, can you help me with premium and coverage?",
+      "intent": "policy_faq",
+      "language_mix": "english_filipino_taglish",
+      "register": "taglish",
+      "terms_detected": [
+        "premium",
+        "coverage"
+      ],
+      "response": "Thanks po. For your policy, we can discuss premium, beneficiary, rider, and coverage in Taglish if that is easier.",
+      "english_explanation": "The bot recognizes life-insurance terminology and offers to continue qualification in natural Taglish.",
+      "next_action": "continue_qualification",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "philippines",
+      "sector": "life_insurance_bancassurance",
+      "input": "Pwede ba Taglish? I need family beneficiary details.",
+      "intent": "policy_faq",
+      "language_mix": "english_filipino_taglish",
+      "register": "taglish",
+      "terms_detected": [
+        "beneficiary"
+      ],
+      "response": "Thanks po. For your policy, we can discuss premium, beneficiary, rider, and coverage in Taglish if that is easier.",
+      "english_explanation": "The bot recognizes life-insurance terminology and offers to continue qualification in natural Taglish.",
+      "next_action": "continue_qualification",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "philippines",
+      "sector": "life_insurance_bancassurance",
+      "input": "Mahal ba ang premium kung may rider at bank referral?",
+      "intent": "premium_objection",
+      "language_mix": "english_filipino_taglish",
+      "register": "taglish_consultative",
+      "terms_detected": [
+        "premium",
+        "rider",
+        "bank referral"
+      ],
+      "response": "Gets ko po yung concern sa premium. I can explain the high-level options, pero final pricing should be confirmed by a licensed advisor.",
+      "english_explanation": "The bot acknowledges the price objection, explains only high-level options, and routes final pricing to a licensed advisor.",
+      "next_action": "licensed_advisor_pricing_review",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "philippines",
+      "sector": "life_insurance_bancassurance",
+      "input": "Baka mag-lapse yung policy ko, can you remind me later?",
+      "intent": "lapse_or_reminder",
+      "language_mix": "english_filipino_taglish",
+      "register": "taglish_polite",
+      "terms_detected": [
+        "policy",
+        "lapse"
+      ],
+      "response": "Noted po. Kung may risk na mag-lapse ang policy, mas safe na mag-set tayo ng reminder or callback para ma-check ang premium status.",
+      "english_explanation": "The bot identifies a possible lapse risk and proposes a reminder or callback rather than guessing policy status.",
+      "next_action": "set_reminder_or_callback",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "philippines",
+      "sector": "life_insurance_bancassurance",
+      "input": "I want a human agent please.",
+      "intent": "human_escalation",
+      "language_mix": "english_filipino_taglish",
+      "register": "taglish_formal",
+      "terms_detected": [],
+      "response": "Sige po, iha-handover ko na kayo sa human agent. Tatawagan po kayo pabalik para ma-assist nang maayos.",
+      "english_explanation": "The bot confirms a human-agent handoff and keeps a polite Filipino/Taglish tone.",
+      "next_action": "handoff_to_human",
+      "fallback_language_preserved": false
+    }
+  ],
+  "indonesia": [
+    {
+      "market": "indonesia",
+      "sector": "multifinance_consumer_finance",
+      "input": "Saya mau cek cicilan dan jatuh tempo.",
+      "intent": "installment_or_terms",
+      "language_mix": "formal_colloquial_bahasa_with_finance_loanwords",
+      "register": "colloquial_bahasa",
+      "terms_detected": [
+        "cicilan",
+        "jatuh tempo"
+      ],
+      "response": "Saya bantu cek ya. Kita bisa bahas cicilan, tenor, DP, dan tanggal jatuh tempo dengan bahasa yang santai tapi tetap jelas.",
+      "english_explanation": "The bot detects consumer-finance terms and continues in clear, colloquial Bahasa Indonesia.",
+      "next_action": "continue_installment_review",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "indonesia",
+      "sector": "multifinance_consumer_finance",
+      "input": "Bisa pakai bahasa santai ya, saya telat bayar angsuran.",
+      "intent": "late_payment_objection",
+      "language_mix": "formal_colloquial_bahasa_with_finance_loanwords",
+      "register": "colloquial_bahasa",
+      "terms_detected": [
+        "angsuran"
+      ],
+      "response": "Kalau ada kendala angsuran atau denda, saya tidak mau mengarang. Saya bantu arahkan ke opsi bantuan resmi.",
+      "english_explanation": "The bot handles late-payment or penalty concerns safely and points to approved payment-support options.",
+      "next_action": "offer_payment_support",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "indonesia",
+      "sector": "multifinance_consumer_finance",
+      "input": "Tenornya masih bisa diubah kalau DP saya kurang?",
+      "intent": "installment_or_terms",
+      "language_mix": "formal_colloquial_bahasa_with_finance_loanwords",
+      "register": "colloquial_bahasa",
+      "terms_detected": [
+        "tenor",
+        "dp"
+      ],
+      "response": "Saya bantu cek ya. Kita bisa bahas cicilan, tenor, DP, dan tanggal jatuh tempo dengan bahasa yang santai tapi tetap jelas.",
+      "english_explanation": "The bot detects consumer-finance terms and continues in clear, colloquial Bahasa Indonesia.",
+      "next_action": "continue_installment_review",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "indonesia",
+      "sector": "multifinance_consumer_finance",
+      "input": "Kulo telat bayar cicilan, pripun denda ne?",
+      "intent": "regional_accent_payment_issue",
+      "language_mix": "formal_colloquial_bahasa_with_finance_loanwords",
+      "register": "javanese_influenced_bahasa",
+      "terms_detected": [
+        "cicilan",
+        "denda"
+      ],
+      "response": "Nggih, saya bantu arahkan ya. Kalau telat bayar cicilan dan ada denda, saya tidak akan mengarang; opsi resminya perlu dicek oleh tim.",
+      "english_explanation": "The bot recognizes Javanese-influenced wording, acknowledges late installment/payment penalty concerns, and routes to official support.",
+      "next_action": "route_to_collections_support",
+      "fallback_language_preserved": false
+    },
+    {
+      "market": "indonesia",
+      "sector": "multifinance_consumer_finance",
+      "input": "Saya butuh customer service manusia.",
+      "intent": "human_escalation",
+      "language_mix": "formal_colloquial_bahasa_with_finance_loanwords",
+      "register": "bahasa_formal",
+      "terms_detected": [],
+      "response": "Baik, saya alihkan ke agen manusia ya. Kalau perlu, nanti kami follow up lagi.",
+      "english_explanation": "The bot confirms handoff to a human customer-service agent in formal Bahasa Indonesia.",
+      "next_action": "handoff_to_cs",
+      "fallback_language_preserved": false
+    }
+  ],
+  "coverage": {
+    "cooperative_customer": true,
+    "sector_specific_objection": true,
+    "mixed_english_finance_terms": true,
+    "colloquial_speech": true,
+    "human_escalation": true,
+    "indonesian_regional_accent_sample": "Javanese-influenced sample: Kulo telat bayar cicilan, pripun denda ne?"
+  }
+}

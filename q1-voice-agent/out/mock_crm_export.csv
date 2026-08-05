@@ -1,0 +1,5 @@
+crm_stage,escalated,last_intent,next_action,retrieval_hits,scenario,turns
+escalated,True,fallback,human specialist review,['kb_lead_qualification_003_4df34138a4'],conflicting_details,3
+qualified_lead,False,documents,send to licensed advisor,"['kb_health_product_faq_002_bc26e63b60', 'kb_lead_qualification_002_dcf158a9bb', 'kb_lead_qualification_002_dcf158a9bb', 'kb_lead_qualification_003_4df34138a4']",cooperative_customer,4
+callback_requested,False,callback_request,schedule callback,"['kb_health_product_faq_006_5e8886e5cc', 'kb_policy_renewal_000_19c8db8e0a']",price_objection,3
+escalated,True,human_escalation,human specialist review,[],out_of_scope,3

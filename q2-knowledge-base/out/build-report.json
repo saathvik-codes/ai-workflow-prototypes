@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "file": "health_product_faq.txt",
+      "chunks": 8,
+      "pii_found": false
+    },
+    {
+      "file": "lead_qualification.txt",
+      "chunks": 4,
+      "pii_found": true
+    },
+    {
+      "file": "policy_renewal.txt",
+      "chunks": 3,
+      "pii_found": false
+    },
+    {
+      "file": "qualification_table.csv",
+      "chunks": 1,
+      "pii_found": false
+    },
+    {
+      "file": "website_partnerships.txt",
+      "chunks": 5,
+      "pii_found": false
+    }
+  ],
+  "raw_files": 5,
+  "chunks_extracted": 37,
+  "chunks_after_dedupe": 21,
+  "pii_masked_chunks": 1,
+  "source_errors": []
+}
